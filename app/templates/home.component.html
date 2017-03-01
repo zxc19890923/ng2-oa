@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/home">OA系统</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active"><a routerLink="main">门户</a></li>
+        <li routerLinkActive="active"><a routerLink="news">新闻</a></li>
+        <li routerLinkActive="active"><a routerLink="notices">消息</a></li>
+        <li routerLinkActive="active"><a routerLink="user">{{username}}</a></li>
+
+        <li routerLinkeActive="active"><a href="javascript:;" (click)="outClick()">退出</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<p class="banner">
+  <img src="./app/images/home.jpg" class="img-responsive"/>
+</p>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

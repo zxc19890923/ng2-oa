@@ -1,0 +1,47 @@
+<div documentSize class="register">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="registerForm">
+          <form #registerForm="ngForm">
+            <p class="text-center text-primary">用户注册</p>
+            <p>
+              <input type="text" name="username" class="form-control" placeholder="用户名" [(ngModel)]="username" required/>
+            </p>
+            <p>
+              <input type="password" name="password" class="form-control" placeholder="密码" [(ngModel)]="password" required/>
+            </p>
+            <p>
+              <input type="password" name="second_password" class="form-control" placeholder="确认密码" [(ngModel)]="second_password" required/>
+            </p>
+            <p>
+              <input type="text" name="position" class="form-control" placeholder="职位" [(ngModel)]="position" required/>
+            </p>
+            <p>
+              <input type="number" name="phone" class="form-control" placeholder="手机号码" [(ngModel)]="phone" required/>
+            </p>
+            <p>
+              <input type="text" name="email" class="form-control" placeholder="邮件" [(ngModel)]="email" required/>
+            </p>
+            <p>
+              <input type="radio" name="sex" value="女" [(ngModel)]="sex"/> 女
+              <input type="radio" name="sex" value="男" [(ngModel)]="sex"/> 男
+            </p>
+            <p>
+              <input type="number" name="age" class="form-control" placeholder="年龄" [(ngModel)]="age" required/>
+            </p>
+            <p>
+              <button class="btn btn-primary btn-block" (click)="registerClick()" [disabled]="!registerForm.form.valid">
+                注册
+              </button>
+            </p>
+            <p>
+              <a routerLink="/login">登录</a>
+              <span class="text-danger pull-right">{{message}}</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

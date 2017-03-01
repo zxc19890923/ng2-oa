@@ -1,0 +1,31 @@
+<div documentSize class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="loginForm">
+          <form #loginForm="ngForm">
+            <p class="text-center text-primary">用户登录</p>
+            <p>
+              <input type="text" name="username" class="form-control" [(ngModel)]="username" placeholder="用户名/手机号/邮箱" required/>
+            </p>
+            <p>
+              <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="密码" required/>
+            </p>
+            <p>
+              <button class="btn btn-primary btn-block" (click)="loginClick()">
+                登录
+              </button>
+            </p>
+          </form>
+          <p>
+            <a routerLink="/register">注册</a>
+            <a routerLink="/forget" class="pull-right">忘记密码</a>
+          </p>
+          <span class="text-danger">
+            {{message}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

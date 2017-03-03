@@ -1,0 +1,5 @@
+<ul class="list-group" style="margin-bottom: 0">
+  <li class="list-group-item" *ngFor="let item of data, let i = index, let odds = odd">
+    <i class="glyphicon glyphicon-file"></i> <a routerLink="/home/news/{{item.id}}" [ngClass]="{'text-danger':i==0}">{{item.title}}</a>
+  </li>
+</ul>

@@ -7,7 +7,24 @@
         </div>
       </div>
       <div class="panel-body">
-
+        <oa-user-info></oa-user-info>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          系统提醒
+        </div>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a routerLink="/home/news" class="btn btn-info btn-block" type="button">
+            新闻更新 <span class="badge">4</span>
+          </a>
+        </p>
+        <a routerLink="/home/notices" class="btn btn-warning btn-block" type="button">
+          通知信息 <span class="badge">6</span>
+        </a>
       </div>
     </div>
   </div>
@@ -16,10 +33,23 @@
       <div class="panel-heading">
         <div class="panel-title">
           新闻信息
+          <span class="pull-right" tooltip="添加新闻">
+            <a routerLink="/home/add_news" class="glyphicon glyphicon-plus"></a>
+          </span>
         </div>
       </div>
       <div class="panel-body">
-
+        <oa-news></oa-news>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          我的进程
+        </div>
+      </div>
+      <div class="panel-body">
+        <oa-process></oa-process>
       </div>
     </div>
   </div>
@@ -27,11 +57,26 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <div class="panel-title">
-          日历
+          通知
         </div>
       </div>
       <div class="panel-body">
-        <oa-date></oa-date>
+        <oa-notices></oa-notices>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          资料下载
+        </div>
+      </div>
+      <div class="panel-body">
+        <oa-file>
+          <header>
+            <h4 class="text-primary text-center">企业问价下载说明和文件安装</h4>
+            <p>下载企业文件的同时, 就默认您同意了企业保密管理制度, 禁止将企业文件, 发送给其他非公司员工, 泄露公司机密, 公司将按照相关规定处置, 一切后果由当事人全部承担。</p>
+          </header>
+        </oa-file>
       </div>
     </div>
   </div>

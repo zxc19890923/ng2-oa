@@ -1,14 +1,15 @@
-import {Directive, ElementRef, Renderer, HostListener} from "@angular/core";
+import {Directive, ElementRef, Renderer, HostListener, OnChanges} from "@angular/core";
 @Directive({
   selector: "[documentSize]"
 })
-export class SizeDirective {
+export class SizeDirective implements OnChanges{
   constructor(public el:ElementRef, public re:Renderer) {
     this.windowSize();
-    // 窗口大小发生变化的时候
-    window.onresize = this.windowSize();
   }
-
+  ngOnChanges() {
+    // 窗口大小发生变化的时候
+    this.windowSize();
+  }
 
   // 定义方法, 在构造函数中调用
   public windowSize() {

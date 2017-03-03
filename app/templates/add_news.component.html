@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <alert type="success" [dismissOnTimeout]="1000" *ngIf="show">{{message}}</alert>
+    <label>新闻标题</label>
+    <p>
+      <input type="text" class="form-control" name="title" [(ngModel)]="title" placeholder="新闻标题"/>
+    </p>
+    <label>新闻内容</label>
+    <p>
+    <oa-froala (froala)="froalaContent($event)"></oa-froala>
+    </p>
+    <label>作者</label>
+    <p>
+      <input type="text" name="author" [(ngModel)]="author" placeholder="作者" class="form-control" />
+    </p>
+    <p>
+      <input type="date" name="time" [(ngModel)]="time" placeholder="发布日期" class="form-control" />
+    </p>
+    <p class="text-right">
+      <button class="btn btn-primary" (click)="addClick()">添加</button>
+    </p>
+    <p class="text-danger">{{message}}</p>
+  </div>
+</div>
+

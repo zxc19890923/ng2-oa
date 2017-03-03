@@ -12,7 +12,7 @@
               <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="密码" required/>
             </p>
             <p>
-              <button class="btn btn-primary btn-block" (click)="loginClick()">
+              <button class="btn btn-primary btn-block" [disabled]="!loginForm.form.valid" (click)="loginClick()">
                 登录
               </button>
             </p>

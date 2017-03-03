@@ -1,0 +1,20 @@
+<ul class="list-group" *ngFor="let item of data, let i = index, let odds = odd" style="margin-bottom: 0">
+  <li class="list-group-item">
+    姓名: <span class="text-primary">{{item.username}}</span>
+  </li>
+  <li class="list-group-item">
+    职位: <span class="text-primary">{{item.position}}</span>
+  </li>
+  <li class="list-group-item">
+    手机: <span class="text-primary">{{item.phone}}</span>
+  </li>
+  <li class="list-group-item">
+    邮箱: <span class="text-primary">{{item.email}}</span>
+  </li>
+  <li class="list-group-item">
+    性别: <span class="text-primary">{{item.sex}}</span>
+  </li>
+  <li class="list-group-item">
+    年龄: <span class="text-primary">{{item.age}}岁</span>
+  </li>
+</ul>

@@ -8,6 +8,26 @@
       </div>
       <p></p>
       <div>
+        <input type="text" [(ngModel)]="form.phone" name="phone" #phone="ngModel" [phone]="'zh-CN'"
+               class="form-control" required placeholder="手机号"/>
+        <p class="text-danger" *ngIf="phone.errors?.phone">手机号码格式不正确</p>
+      </div>
+      <p></p>
+      <div>
+        <input type="email" [(ngModel)]="form.email" name="email" #email="ngModel" email
+               class="form-control" required placeholder="邮箱"/>
+        <p class="text-danger" *ngIf="email.errors?.email">
+          邮箱地址不正确
+        </p>
+      </div>
+      <p></p>
+      <div>
+        <input type="url" [(ngModel)]="form.url" name="url" #url="ngModel" url
+               class="form-control" required placeholder="个人主页" />
+        <p class="text-danger" *ngIf="url.errors?.url">网络地址格式不正确</p>
+      </div>
+      <p></p>
+      <div>
         <input type="text" [(ngModel)]="form.age" name="num" #age="ngModel" number class="form-control" required
                placeholder="年龄"/>
         <p class="text-danger" *ngIf="age.errors?.number">只能输入数字</p>
@@ -34,7 +54,7 @@
       <p></p>
       <!--这个是提交按钮,如果条件不满足, 提价按钮为只读-->
       <p>
-        <button [disabled]="age.errors?.number || !myForm.form.valid" class="btn btn-primary">提交</button>
+        <button [disabled]="!myForm.form.valid" class="btn btn-primary">提交</button>
       </p>
     </div>
   </div>
